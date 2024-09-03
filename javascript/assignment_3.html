@@ -1,0 +1,51 @@
+<html>
+    <head></head>
+    <body>
+        <fieldset>
+            <legend>"math operation"</legend>
+            num1 : <input type="number" id="n1"/><br/>
+            num2 : <input type="number" id="n2"/><br/>
+            <input type="button" value="Add" onclick="cal(event)"/>
+            <input type="button" value="sub" onclick="cal(event)"/>
+            <input type="button" value="mul" onclick="cal(event)"/>
+            <input type="button" value="div" onclick="cal(event)"/>
+            <p id="p1"></p>
+        </fieldset>
+            <script>
+                function cal(event){
+                    let val=0;
+                    let tx1=document.getElementById("n1").value;
+                    let tx2=document.getElementById("n2").value;
+
+                    let tx3=event.target.value;
+                    let paraObj=document.getElementById("p1");
+                    if(tx3=="Add"){
+                        val=parseInt(tx1)+parseInt(tx2);
+                    }
+                    if (tx3=="sub"){
+                        val=tx1-tx2;
+                    
+                    }
+                    if (tx3=="mul"){
+                        val=tx1*tx2;
+                    
+                    }
+                    if (tx3=="div"){
+                        val=tx1/tx2;
+                    
+                    }
+                    paraObj.innerHTML=val;
+
+
+
+                }
+            </script>
+
+
+
+
+
+
+        
+    </body>
+</html>

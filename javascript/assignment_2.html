@@ -1,0 +1,58 @@
+<!-- Create a web page to process product details using JavaScript.  Calculate total amount based on the given values.  (Refer the Image)
+
+		a.  Take the confirmation from the user before proceeding the total calculation. 
+
+	Hint :   If qty is more than 10  	---   give 10% discount 
+				 If qty is more than 20  	---   give 15% discount 
+				 If qty is more than 30  	---   give 20% discount  -->
+
+
+<html>
+
+<head></head>
+
+<body>
+    <fieldset>
+        Product Name : <input type="text" id="Pname" />
+        <br />
+        Quantity : <input type="number" id="pq" />
+        <br />
+        Unit Price: <input type="number" id="up" />
+        <br />
+        <input type="button" value="Get Total" onclick="cal()" />
+        <br />
+        <p id="p1"></p>
+
+    </fieldset>
+
+    <script>
+        function cal() {
+            let pname = document.getElementById("pname");
+            let quanti = document.getElementById("pq");
+            let prices = document.getElementById("up");
+            let paraObj = document.getElementById("p1");
+            let cost = 0;
+            let quant = quanti.value;
+            let price = prices.value;
+            if (quant > 10 && quant <= 20) {
+                cost = (quant * price) - ((quant * price) / 10);
+
+            }
+            if (quant > 20 && quant <= 30) {
+                cost = quant * price - ((quant * price) / 15);
+
+            }
+            if (quant > 30) {
+                cost = quant * price - ((quant * price) / 20);
+
+            }
+            if (quant < 10) {
+                cost = (quant * price)
+            }
+            paraObj.innerHTML = "Total amount is " + cost;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!-- Write a JavaScript code to display Employee details as follows in console window: 
+				Empno : 12645,  Ename  :  Scott,  Job : Manager, Salary :  45000 -->
+
+
+<html>
+    <head>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Employee details</legend>
+            Empno: <input type="text" id ="e1">
+            Ename: <input type="text" id="e2">
+            job: <input type="text" id="e3">
+            salary: <input type="text" id="e4">
+            <input type="button" value="submit" onclick ="f1()">
+            <p id="p1"></p>
+        </fieldset>
+
+        <script>
+            function f1(){
+            let empno=document.getElementById("e1");
+            let ename=document.getElementById("e2");
+            let job=document.getElementById("e3");
+            let sal=document.getElementById("e4");
+            let details=document.getElementById("p1")
+            details.innerHTML="Empno : "+empno.value +" , Ename : "+ename.value+" , job : "+job.value+" , salary : "+ sal.value;
+            alert(details.innerHTML);
+            console.log(details.innerHTML);
+        }
+
+        </script>
+
+    </body>
+</html>
