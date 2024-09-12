@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Product details
+    </title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Product Details</legend>
+        Product Name: <input type="text" id="t1" /><br /><br />
+        Unit Price: <input type="number" id="t2" /><br /><br />
+        Quantity: <input type="number" id="t3" /><br /><br />
+        <input type="button" value="Submit" onclick="f1()" />
+        <p id="pp1"></p>
+    </fieldset>
+
+    <script>
+        function f1() {
+            alert("Submit the details");
+            let tx1 = document.getElementById("t1");
+            let tx2 = document.getElementById("t2");
+            let tx3 = document.getElementById("t3");
+            let tx4 = document.getElementById("pp1");
+
+            let val1 = tx2.value;
+            let val2 = tx3.value;
+            if (val2 <= 10) {
+                let val3 = (val1 * val2);
+                tx4.innerHTML = "Total amount : " + val3;
+            }
+            else if (val2 > 10 && val2 <= 20) {
+                let val3 = (val1 * val2) - ((val1 * val2) * 0.1);
+                tx4.innerHTML = "Total amount : " + val3;
+            }
+            else if (val2 > 20 && val2 <= 30) {
+                let val3 = (val1 * val2) - ((val1 * val2) * 0.15);
+                tx4.innerHTML = "Total amount : " + val3;
+            }
+            else {
+                if (val2 > 30) {
+                    let val3 = (val1 * val2) - ((val1 * val2) * 0.2);
+                    tx4.innerHTML = "Total amount : " + val3;
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

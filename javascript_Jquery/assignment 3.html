@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Math operations
+        </title>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Math operations</legend>
+            Number 1: <input type="number" id="t1"/><br/><br/>
+            Number 2: <input type="number" id="t2"/><br/><br/>
+            <input type="button" value="Add" onclick="f1(event)"/>
+            <input type="button" value="Sub" onclick="f1(event)"/>
+            <input type="button" value="Mul" onclick="f1(event)"/>
+            <input type="button" value="Div" onclick="f1(event)"/>
+            
+            <p id="pp1"></p>
+        </fieldset>
+
+        <script>
+                function f1(event){
+                    let tx1=document.getElementById("t1");
+                    let tx2=document.getElementById("t2");
+                    let tx4=document.getElementById("pp1");
+
+                    let s1=parseInt(tx1.value);
+                    let s2=parseInt(tx2.value);
+                    let tx3=event.target.value;
+                    if(tx3=="Add"){
+                        let val3=s1+s2;
+                        tx4.innerHTML="Sum : "+val3;
+                    }
+                    if(tx3=="Sub"){
+                        let val3=s1-s2;
+                        tx4.innerHTML="Sub : "+val3;
+                    }
+                    if(tx3=="Mul"){
+                        let val3=s1*s2;
+                        tx4.innerHTML="Mul : "+val3;
+                    }
+                    if(tx3=="Div"){
+                        let val3=s1/s2;
+                        tx4.innerHTML="Div : "+val3;
+                    }
+                    
+                }
+        </script>
+    </body>
+</html>
